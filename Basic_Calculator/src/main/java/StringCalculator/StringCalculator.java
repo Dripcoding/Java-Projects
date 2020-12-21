@@ -43,4 +43,10 @@ public class StringCalculator {
         System.out.println("result: " + result);
         return result;
     }
+
+    public void printAllChars(String targetString) {
+        for (Character c : targetString.toCharArray()) {
+            System.out.println(c);
+        }
+    }
 }
