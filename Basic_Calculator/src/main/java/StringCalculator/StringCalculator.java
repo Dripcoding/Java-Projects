@@ -22,4 +22,15 @@ public class StringCalculator {
         System.out.println("result: " + stringJoiner.toString());
         return stringJoiner.toString();
     }
+
+    public String buildNewStringFromCharList(List<Character> charList) {
+        StringBuilder stringBuilder = new StringBuilder();
+
+        for (Character c : charList) {
+            stringBuilder.append(c);
+        }
+
+        System.out.println("result: " + stringBuilder.toString());
+        return stringBuilder.toString();
+    }
 }

@@ -21,13 +21,27 @@ public class StringCalculatorTest {
 
     @Test
     @DisplayName("It should create a new string from a list of strings")
-    public void shouldBuildANewStringFromCharsList() {
+    public void shouldBuildANewStringFromStringList() {
         List<String> stringList = new ArrayList<>();
         stringList.add("a");
         stringList.add("b");
         stringList.add("c");
 
         String result = stringCalculator.buildNewStringFromStringList(stringList);
+        assertNotNull(result);
+        assertThat(result, instanceOf(String.class));
+        assertEquals("abc", result);
+    }
+
+    @Test
+    @DisplayName("It should create a new string from a list of chars")
+    public void shouldBuildANewStringFromCharList() {
+        List<Character> charList = new ArrayList();
+        charList.add('a');
+        charList.add('b');
+        charList.add('c');
+
+        String result = stringCalculator.buildNewStringFromCharList(charList);
         assertNotNull(result);
         assertThat(result, instanceOf(String.class));
         assertEquals("abc", result);
