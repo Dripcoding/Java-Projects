@@ -44,6 +44,11 @@ public class StringCalculator {
         return result;
     }
 
+    public boolean isPalindrome(String targetString) {
+        String reversed = reverseGivenString(targetString);
+        return targetString.equals(reversed);
+    }
+
     public void printAllChars(String targetString) {
         for (Character c : targetString.toCharArray()) {
             System.out.println(c);

@@ -57,4 +57,25 @@ public class StringCalculatorTest {
         assertThat(result, instanceOf(String.class));
         assertEquals("cba", result);
     }
+
+    @Test
+    @DisplayName("It should check if given string is a palindrome")
+    public void shouldCheckIfIsPalindrome() {
+        String notPalindrome = "abc";
+
+        Boolean result = stringCalculator.isPalindrome(notPalindrome);
+
+        assertNotNull(result);
+        assertThat(result, instanceOf(Boolean.class));
+        assertEquals(false, result);
+
+        String isPalindrome = "abba";
+
+        Boolean resultTwo = stringCalculator.isPalindrome(isPalindrome);
+
+        assertNotNull(resultTwo);
+        assertThat(resultTwo, instanceOf(Boolean.class));
+        assertEquals(true, resultTwo);
+    }
 }
+
