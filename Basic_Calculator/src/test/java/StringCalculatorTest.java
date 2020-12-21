@@ -46,4 +46,15 @@ public class StringCalculatorTest {
         assertThat(result, instanceOf(String.class));
         assertEquals("abc", result);
     }
+
+    @Test
+    @DisplayName("It should reverse the given string")
+    public void shouldReverseGivenString() {
+        String givenString = "abc";
+
+        String result = stringCalculator.reverseGivenString(givenString);
+        assertNotNull(result);
+        assertThat(result, instanceOf(String.class));
+        assertEquals("cba", result);
+    }
 }

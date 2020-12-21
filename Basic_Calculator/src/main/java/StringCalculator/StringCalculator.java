@@ -33,4 +33,14 @@ public class StringCalculator {
         System.out.println("result: " + stringBuilder.toString());
         return stringBuilder.toString();
     }
+
+    public String reverseGivenString(String targetString) {
+        String result = "";
+        StringBuilder stringBuilder = new StringBuilder();
+
+        stringBuilder.append(targetString);
+        result = stringBuilder.reverse().toString();
+        System.out.println("result: " + result);
+        return result;
+    }
 }
