@@ -5,13 +5,7 @@ import java.util.StringJoiner;
 
 public class StringCalculator {
 
-    // build a new string from a list of chars
-    // build a new string from a list of strings
-    // check if a string is a palindrome
-    // reverse a string
-    // check if a substring is present in a given string
     // splice a substring in a given string
-    // print all chars in a string
 
     public String buildNewStringFromStringList(List<String> stringList) {
         StringJoiner stringJoiner = new StringJoiner("");
@@ -47,6 +41,10 @@ public class StringCalculator {
     public boolean isPalindrome(String targetString) {
         String reversed = reverseGivenString(targetString);
         return targetString.equals(reversed);
+    }
+
+    public boolean isSubstringInTarget(String subString, String targetString) {
+        return targetString.contains(subString);
     }
 
     public void printAllChars(String targetString) {

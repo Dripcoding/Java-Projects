@@ -77,5 +77,18 @@ public class StringCalculatorTest {
         assertThat(resultTwo, instanceOf(Boolean.class));
         assertEquals(true, resultTwo);
     }
-}
 
+    @Test
+    @DisplayName("It should check if substring is in target string")
+    public void shouldCheckIfSubStringIsInTarget() {
+        String targetString = "California";
+        String subString = "for";
+
+        Boolean result = stringCalculator.isSubstringInTarget(subString, targetString);
+
+        assertNotNull(result);
+        assertThat(result, instanceOf(Boolean.class));
+        assertEquals(true, result);
+        assertEquals(false, stringCalculator.isSubstringInTarget("zzz", targetString));
+    }
+}
